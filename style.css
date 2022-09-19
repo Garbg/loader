@@ -1,19 +1,19 @@
 :root{
-    --maskStart: 0deg;
-    --maskEnd: 180deg;
+    --loaderStart: 0deg;
+    --loaderEnd: 180deg;
 }
 
 body {
   background-color: rgb(25,25,25);
 }
 
-@property --maskStart {
+@property --loaderStart {
     syntax: '<angle>';
     inherits: false;
     initial-value: 0deg;
   }
   
-  @property --maskEnd {
+  @property --loaderEnd {
     syntax: '<angle>';
     inherits: false;
     initial-value: 180deg;
@@ -27,26 +27,26 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 99999px;
-  background: conic-gradient(from -90deg, rgba(0,0,0,0) var(--maskStart), #81FBB8 var(--maskStart), #28C76F var(--maskEnd), rgba(0,0,0,0) var(--maskEnd));
+  background: conic-gradient(from -90deg, rgba(0,0,0,0) var(--loaderStart), #81FBB8 var(--loaderStart), #28C76F var(--loaderEnd), rgba(0,0,0,0) var(--loaderEnd));
   animation: gradient 3s infinite ease;
 }
 
 @keyframes gradient{
     0% {
-		--maskStart: 0deg;
-		--maskEnd: 0deg;
+		--loaderStart: 0deg;
+		--loaderEnd: 0deg;
 	}
 	33% {
-		--maskStart: 0deg;
-		--maskEnd: 180deg;
+		--loaderStart: 0deg;
+		--loaderEnd: 180deg;
 	}
 
     66% {
-		--maskStart: 180deg;
-		--maskEnd: 180deg;
+		--loaderStart: 180deg;
+		--loaderEnd: 180deg;
 	}
     100% {
-		--maskStart: 0deg;
-		--maskEnd: 0deg;
+		--loaderStart: 0deg;
+		--loaderEnd: 0deg;
 	}
 }
